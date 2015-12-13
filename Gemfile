@@ -19,7 +19,7 @@ gem 'sass-rails', '4.0.5'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.1'
 gem 'jquery-rails', '3.0.4'
-gem 'turbolinks', '1.1.1'
+gem 'turbolinks', '2.5.3'
 gem 'jbuilder', '1.0.2'
 
 group :doc do
@@ -29,4 +29,5 @@ end
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
+  gem 'puma',           '2.11.1'
 end
