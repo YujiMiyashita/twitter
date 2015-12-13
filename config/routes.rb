@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
 resources :users, :except => [:inex, :new]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -11,6 +13,9 @@ resources :users, :except => [:inex, :new]
    get 'contact' => 'static_pages#contact'
    get 'about' => 'static_pages#about'
    get 'signup' => 'users#new'
+   get 'login' => 'sessions#new'
+   post 'login' => 'sessions#create'
+   delete 'logout' => 'sessions#destroy'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
